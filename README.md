@@ -26,8 +26,9 @@ rxconfig()
         
      }
      
-     
- Detailed description will added soon.
+     ![ppm_sample](https://user-images.githubusercontent.com/41143602/171629917-b9cbaf1a-79f7-4448-91e2-bffafcbbc87b.PNG)
+
+ 
 ## Magis
 
 Magis is flight controller software (firmware) used to fly **Pluto V3R** and **PlutoX** nano drones of **Pluto Platform**
