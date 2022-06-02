@@ -17,27 +17,5 @@ Steps to use this Firmware in your current Cygnus build
 For mor details pleade chrcout following link: https://docs.google.com/document/d/1_X4itSaUjFtl0rr2xG9-2RV-aztFCH1I9iCWbyf6xlU/edit
 
 Sample Program: PlutoPilot.cpp
-// Do not remove the include below
-#include "PlutoPilot.h"
-#include "RxMode.h"
-    void rxconfig(){
-       //To setup your Reciever input use this function 
-         RX.InputStatus(PPM_IP);
-       //RX.InputStatus(MSP_IP);
-    }
-//The setup function is called once at Pluto's hardware startup
-    void plutoInit(void){
-// Add your hardware initialization code here
-    }
-//The function is called once before plutoLoop when you activate Developer Mode
-    void onLoopStart(void){
-// do your one time stuffs here
-    }
-// The loop function is called in an endless loop
-    void plutoLoop(void){
-//Add your repeated code here
-    }
-//The function is called once after plutoLoop when you deactivate Developer Mode
-    void onLoopFinish(void){
-// do your cleanup stuffs here
-    }
+
+![ppm_sample](https://user-images.githubusercontent.com/41143602/171610512-c9a3dd1f-8746-4606-b7b8-4e6c7644b064.PNG)
