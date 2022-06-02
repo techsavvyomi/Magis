@@ -1,6 +1,6 @@
 // Do not remove the include below
 #include "PlutoPilot.h"
-
+#include "RxMode.h" //additional Library for Rx mode
 void rxconfig()
 {
   //To setup your Reciever input use this function 
