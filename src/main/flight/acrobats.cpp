@@ -51,6 +51,7 @@
 #include "flight/navigation.h"
 #include "flight/failsafe.h"
 #include "flight/altitudehold.h"
+#include "io/ledstrip.h"
 #include "config/runtime_config.h"
 #include "config/config.h"
 #include "config/config_profile.h"

@@ -178,7 +178,7 @@ extern "C" {
 //#define LASER_ALT // to integrate with althold
 
 
-
+#define LED_STRIP
 #define FLIGHT_STATUS_INDICATOR
 #define ENABLE_ACROBAT
 #define LED_ENABLE

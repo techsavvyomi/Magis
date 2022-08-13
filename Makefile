@@ -434,11 +434,13 @@ DRONA_SRC = flight/acrobats.cpp \
             drivers/opticflow_paw3903.cpp \
             drivers/ranging_vl53l0x.cpp \
             drivers/sc18is602b.cpp\
+            drivers/light_ws2811strip.c \
             flight/posControl.cpp\
             flight/posEstimate.cpp\
             flight/opticflow.cpp\
             command/command.cpp\
             command/localisationCommand.cpp\
+            io/ledstrip.cpp \
             API/Specifiers.cpp \
 		    API/Peripheral.cpp \
 		    API/XRanging.cpp \
