@@ -450,7 +450,10 @@ DRONA_SRC = flight/acrobats.cpp \
 			API/Motor.cpp\
 			API/API-Utils.cpp\
 			API/Localisation.cpp\
-			API/RxMode.cpp\
+			API/pluto-mode.cpp\
+			API/Hover.cpp\
+			API/Rover.cpp\
+			
 
 
 		    
@@ -763,7 +766,9 @@ MOTOLAB_SRC = \
 
 ifeq ($(BUILD_TYPE),BIN)
 $(TARGET)_SRC:=$($(TARGET)_SRC)\
-			API/PlutoPilot.cpp
+			API/PlutoPilot.cpp \
+
+			
 endif               
 
 
@@ -987,3 +992,4 @@ $(TARGET_OBJS) : Makefile
 
 # include auto-generated dependencies
 -include $(TARGET_DEPS)
+
