@@ -8,8 +8,8 @@
 
 
 
-#ifndef _Hover_H_
-#define _Hover_H_
+#ifndef _HOVER_H_
+#define _HOVER_H_
 
 
 void HoverInit(void);

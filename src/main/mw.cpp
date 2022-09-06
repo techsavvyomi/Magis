@@ -21,7 +21,7 @@
 #include <math.h>
 
 #include "platform.h"
-
+#include"API/pluto-mode.h"
 #include "common/maths.h"
 #include "common/axis.h"
 #include "common/color.h"
@@ -98,8 +98,10 @@
 #include "API/Peripheral.h"
 #include "API/Motor.h"
 #include "API/PlutoPilot.h"
+#include "API/Hover.h"
 #include "API/XRanging.h"
 #include "API/Localisation.h"
+#include "API/Rover.h"
 #include "command/command.h"
 #include "command/localisationCommand.h"
 #include "drivers/opticflow_paw3903.h"
@@ -1031,6 +1033,7 @@ void userCode()
                 }
 
                 plutoLoop();
+               // HoverLoop();
 
             }
         } else {
@@ -1087,6 +1090,23 @@ void userCode()
 void loop(void)
 {
 
+#ifdef HOVER
+	if (rxIsReceivingSignal()) {
+		if(PLUTO_MODE==1){
+        HoverLoop();
+		}
+		if(PLUTO_MODE==2){
+			RoverLoop();
+		}
+	}
+#endif
+/*
+#ifdef ROVER
+	if (rxIsReceivingSignal()) {
+        RoverLoop();
+	}
+#endif
+*/
     static uint32_t loopTime;
 #if defined(BARO) || defined(SONAR)
     static bool haveProcessedAnnexCodeOnce = false;
@@ -1178,6 +1198,7 @@ void loop(void)
         if (masterConfig.rxConfig.rcSmoothing) {
             filterRc();
         }
+
 
         userCode();
 

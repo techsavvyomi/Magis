@@ -1,17 +1,11 @@
 // Do not remove the include below
 #include "PlutoPilot.h"
-#include "RxMode.h" //additional Library for Rx mode
-void rxconfig()
-{
-  //To setup your Reciever input use this function 
-  //RX.InputStatus(PPM_IP);
-   //RX.InputStatus(MSP_IP);
-}
+#include "pluto-mode.h"
 //The setup function is called once at Pluto's hardware startup
 void plutoInit(void)
 {
 // Add your hardware initialization code here
-
+Mode.PlutoMode(HOVER_IP);
 }
 
 

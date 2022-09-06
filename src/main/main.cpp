@@ -95,7 +95,7 @@
 #endif
 
 #include "build_config.h"
-
+#include"API/pluto-mode.h"
 #include "command/localisationCommand.h"
 
 #include "API/PlutoPilot.h"
@@ -104,6 +104,8 @@
 #include "API/Peripheral.h"
 #include "API/Localisation.h"
 #include "API/Motor.h"
+#include "API/Hover.h"
+#include "API/Rover.h"
 
 
 extern uint32_t previousTime;
@@ -175,7 +177,7 @@ initEEPROM();
 
 ensureEEPROMContainsValidData();
 readEEPROM();
-rxconfig(); //caling new added function
+
 systemState |= SYSTEM_STATE_CONFIG_LOADED;
 
 #ifdef STM32F303
@@ -596,9 +598,19 @@ updatePosGains();
 
 resetUser();
 
+#ifdef HOVER
+		if(PLUTO_MODE==1){
+        HoverInit();
+		}
+        if(PLUTO_MODE==2){
+			RoverInit();
+		}
 
-
+#endif
 plutoInit();
+
+
+
 
 
 timerDataConfiguration();

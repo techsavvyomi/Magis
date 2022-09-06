@@ -99,7 +99,7 @@ extern "C" {
 #define UART2_GPIO_AF       GPIO_AF_7
 #define UART2_TX_PINSOURCE  GPIO_PinSource2
 #define UART2_RX_PINSOURCE  GPIO_PinSource3
-
+#define HOVER
 /* #define UART3_TX_PIN        GPIO_Pin_10 // PB10 (AF7)
  #define UART3_RX_PIN        GPIO_Pin_11 // PB11 (AF7)
  #define UART3_GPIO_AF       GPIO_AF_7
@@ -109,7 +109,6 @@ extern "C" {
 
 #define USE_I2C
 #define I2C_DEVICE (I2CDEV_1) // SDA (PB9/AF4), SCL (PB8/AF4)
-
 #define I2C1_SCL_GPIO        GPIOB
 #define I2C1_SCL_GPIO_AF     GPIO_AF_4
 #define I2C1_SCL_PIN         GPIO_Pin_8
